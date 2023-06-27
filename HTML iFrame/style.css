@@ -1,0 +1,17 @@
+p{
+    color: blue;
+}
+/* ID Define */
+#idtag{
+   background-color: blueviolet;
+}
+
+/* Class Define */
+.note {
+    font-size: 120%;
+    color: red;
+  }
+
+#tag{
+    color: coral;
+  }
