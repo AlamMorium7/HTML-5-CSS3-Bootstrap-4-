@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2 id="empty"></h2>
+    <button type="button" onclick="myPosition()">Click on Location</button>
+
+    <script>
+        // h1 tag stores in findIdtag variable
+        var findIdtag=document.getElementById("empty");
+
+        function myPosition(){
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(showLocation);
+            }
+        }
+// Function to show location
+        function showLocation(position){
+            findIdtag.innerHTML="long :"+position.coords.longitude; //Latitude
+        }
+    </script>
+    <!-- When a user clicks a button, the "myPosition" function executes and determines whether or not the browser will support geoLocation. If supported, the API will be called, and the "showLocation" method will be used to display the current position. The h1 tag would receive the position using the showLocation function. -->
+
+</body>
+</html>
